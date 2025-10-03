@@ -15,8 +15,14 @@ ex. <br>
 ![2D 텐서 설명 이미지](docs/images/2d_tensor_image.jpeg)
 2차원 텐서의 경우, (행렬로 치면) 행의 크기 : batch size, 열의 크기 : dim
 
-[!3D 텐서 (비전) 설명 이미지]
 
 
+비전 분야와 자연어 분야의 텐서 차원별 네이밍이 다르다.
 
-[!3D 텐서 (NLP) 설명 이미지]
+###### 3D텐서 - 비전에서
+|t|=(batch size, widht, height) <br>
+[!3D 텐서 (비전) 설명 이미지](docs/images/3d_tensor_Vision.jpeg)
+
+
+###### 3D텐서 - NLP에서 
+[!3D 텐서 (NLP) 설명 이미지](docs/images/3d_tensor_NLP.jpeg)
