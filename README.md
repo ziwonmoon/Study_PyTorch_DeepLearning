@@ -21,8 +21,8 @@ ex. <br>
 
 ###### 3D텐서 - 비전에서
 |t|=(batch size, widht, height) <br>
-[!3D 텐서 (비전) 설명 이미지](docs/images/3d_tensor_Vision.jpeg)
+![3D 텐서 (비전) 설명 이미지](docs/images/3d_tensor_Vision.jpeg)
 
 
 ###### 3D텐서 - NLP에서 
-[!3D 텐서 (NLP) 설명 이미지](docs/images/3d_tensor_NLP.jpeg)
+![3D 텐서 (NLP) 설명 이미지](docs/images/3d_tensor_NLP.jpeg)
