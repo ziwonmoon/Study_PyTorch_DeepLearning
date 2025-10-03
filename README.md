@@ -1,7 +1,7 @@
 # Study_PyTorch_DeepLearning
 "딥 러닝 파이토치 교과서 - 입문부터 LLM 파인튜닝까지" 실습 공간
 
-본 리포는 "딥 러닝 파이토치 교과서 - 입문부터 LLM 파인튜닝까지"(Bryce and Eddie, wikidocs, https://wikidocs.net/book/2788)의 실습 결과와 개인적인 추가 코드로 이루어져 있습니다.
+본 리포는 "딥 러닝 파이토치 교과서 - 입문부터 LLM 파인튜닝까지"( Bryce and Eddie, wikidocs, https://wikidocs.net/book/2788 )의 실습 결과와 개인적인 추가 코드로 이루어져 있습니다.
 
 ## 중요 개념 & 햇갈리는 개념 정리
 
@@ -26,3 +26,17 @@ ex. <br>
 
 ###### 3D텐서 - NLP에서 
 ![3D 텐서 (NLP) 설명 이미지](docs/images/3d_tensor_NLP.jpeg)
+
+
+
+####Broadcasting
+행렬의 연산시 파이토치가 브로드캐스팅을 통해 크기를 맞춰줌.
+*이런 기능은 없는게 낫지 않을까? 많이 했갈릴 것 같다.*
+
+####Dot Product vs Element-Wise Multiplication
+ \* :  element-wise mult. *매트랩과 다르다*
+ tensor1.mul(tensor2) : element-wise mult.
+ tensor1.matmul(tensor2) : (matrix multiplication, dot product)
+ *Explicit하게 사용하는 습관을 들여놓아야 좋을듯. 딱봐도 햇갈리기 좋다*
+ 
+ 
