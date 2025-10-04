@@ -29,14 +29,17 @@ ex. <br>
 
 
 
-####Broadcasting
+
+#### Broadcasting
 행렬의 연산시 파이토치가 브로드캐스팅을 통해 크기를 맞춰줌.
 *이런 기능은 없는게 낫지 않을까? 많이 했갈릴 것 같다.*
 
-####Dot Product vs Element-Wise Multiplication
- \* :  element-wise mult. *매트랩과 다르다*
- tensor1.mul(tensor2) : element-wise mult.
- tensor1.matmul(tensor2) : (matrix multiplication, dot product)
- *Explicit하게 사용하는 습관을 들여놓아야 좋을듯. 딱봐도 햇갈리기 좋다*
+#### Dot Product vs Element-Wise Multiplication
+ \* :  element-wise mult. *매트랩과 다르다* <br>
+ tensor1.mul(tensor2) : element-wise mult. <br>
+ tensor1.matmul(tensor2) : (matrix multiplication, dot product) <br>
+ *Explicit하게 사용하는 습관을 들여놓아야 좋을듯. 딱봐도 햇갈리기 좋다* <br>
  
- 
+#### In-place Operation : 덮어쓰기 연산.
+tensor1.mul(tensor2) : 반환값은 tensor1과 tensor2의 요소곱<br>
+tensor1.mul_(tensor2) : 반환값은 동일. 그러나 **tensor1의 값 자체가 변한다** <br>
