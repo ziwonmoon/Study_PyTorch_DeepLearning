@@ -6,12 +6,37 @@
 개념 정리 Notion 링크 : https://scrawny-author-314.notion.site/Pytorch-Deep-Learning-29b223c8e74c80e9b1f8e5ec8c5bd89d
 
 ## 환경 설정
-책에서 제시하는 Google Colab의 기본 웹 IDE를 이용하지 않았습니다. <p>
-VSCode는 저에게 훨씬 친숙한 IDE이며, 확장 기능을 사용하기 쉽기 때문에 VSCode를 택했습니다.<p>
-또한 대학원 진학 시 연구실 서버에 접속하여 연구해야할 경우, 일관된 작업환경을 유지할 수 있는 장점도 있다고 보았습니다.<p>
-아래에서는 제가 학습한 것과 같은 환경을 설정하는 방법을 설명합니다. <p>
-<p>
+VSCode로 Colab에 SSH 접속하여 사용하기를 고려하였으나, Colab 정책 상 무료 세션에서는 원격 사용이 금지될 수 있기 때문에, Colab Notebook을 이용하기로 하였습니다.<p>
+버전 관리와 포트폴리오를 위하여 Google Drive의 파일을 Github로 푸시해야 할 필요가 있습니다. <p>
+1. Colab에서 Google Drive 마운트 후에 푸시 (선택)
+2. Google Drive - Local Drive 동기화 후 로컬에서 푸시
+1의 방법으로는, 동기화 시간을 기다리지 않아도 되는게 장점이나, Colab Notebook 외의 파일(Markdown)을 편집할때 불편한게 단점입니다. <p>
+2의 방법으로는, 동기화 시간을 기다려야 한다는게 단점이나, 대부분의 파일 수정을 편한 IDE로 이용할 수 있는게 장점입니다.<p>
+매번 푸시하기 전에 동기화를 기다려야 한다면 실수가 일어날 수 있고 기다리기도 번거로울 수 있기 때문에 1의 방법을 택했습니다.<p>
 
-#### VSCode Extensions
-* Python - 파이썬 문법 뿐 아니라 ipynb 노트북도 지원합니다.
-* 
+#### Google Colab - Git Push
+```Python
+COMMIT_MESSAGE = """
+커밋 메시지 작성
+"""
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+%cd <<PATH TO PROJECT DIR>>
+!git config --global user.email '<<EMAIL>>'
+!git config --global user.name '<<NAME>'
+
+!git add -A --all
+!git commit -m "$COMMIT_MESSAGE"
+!git push
+```
+#### Google Colab - Git Pull
+```Python
+from google.colab import drive
+drive.mount('/content/drive')
+
+%cd <<PATH TO PROJECT DIR>>
+
+!git pull origin main
+```
